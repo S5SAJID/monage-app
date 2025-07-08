@@ -14,18 +14,12 @@ class CustomerTile extends StatelessWidget {
           ? CircleAvatar(
               backgroundImage: FileImage(File(customer.imagePath!)),
               radius: 24,
-              foregroundImage: FileImage(File(customer.imagePath!)),
-              child: Semantics(
-                label: 'Customer profile image',
-                child: const SizedBox.shrink(),
-              ),
             )
           : CircleAvatar(
               child: Text(customer.name[0]),
               radius: 24,
               foregroundColor: Colors.white,
               backgroundColor: Colors.green[700],
-              semanticsLabel: 'Customer initial',
             ),
       title: Text(
         customer.name,
